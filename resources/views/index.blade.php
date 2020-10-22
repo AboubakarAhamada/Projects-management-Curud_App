@@ -10,15 +10,19 @@
     </div>    
 @endif
 
+
 <div class="card">
     <div class="card-header">
-        <div class="float-left">
-            <h2>List Of Projects </h2>
-        </div>
+        
         <div class="float-right">
             <a class="btn btn-success" href="{{ route('projects.create') }}" title="Create a project"> <i class="fas fa-plus-circle"></i>
             </a>
         </div>
+        <form  action = "{{route('projects.index')}}" class="form-inline float-center" method="GET">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" name="term">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <h1 style="text-align: center">List of projects</h1>
     </div>
     <div class="card-content">
     <table class="table table-hover table-responsive-lg">
